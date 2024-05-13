@@ -8,13 +8,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { NavBarLoginComponent } from './components/nav-bar-login/nav-bar-login.component';
+import { VistaAdminComponent } from './components/vista-admin/vista-admin.component';
+import { VistaRecomendacionComponent } from './components/vista-recomendacion/vista-recomendacion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavBarComponent,
-    NavBarLoginComponent
+    NavBarLoginComponent,
+    VistaAdminComponent,
+    VistaRecomendacionComponent
   ],
   imports: [
     BrowserModule,

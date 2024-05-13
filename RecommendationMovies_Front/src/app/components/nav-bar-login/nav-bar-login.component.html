@@ -1,27 +1,25 @@
+<!-- NAVBAR - LOGIN Y REGISTER -->
+<div class="navbar sticky-top container-fluid py-3" style="background-color: #001d3d;">
+    <a class="tituloHome navbar-brand ms-4">Click & Play</a>
+    <form class="d-flex">
+        <button  class="buttonHome" data-bs-toggle="modal" data-bs-target="#exampleModalLogin" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Login
+        </button>
+        <button class="buttonHome ms-3" data-bs-toggle="modal" data-bs-target="#exampleModalregister" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Register
+        </button>
+    </form>
+</div>
 
-    <!-------------------------------------------------------------------------------------------------------------->
-        <!-----------------------------------------------ENCABEZADO----------------------------------------------------->
-        <!-------------------------------------------------------------------------------------------------------------->
-        <!-- NAVBAR -->
-        <div class="navbar sombra sticky-top container-fluid py-3" style="background-color: #E63946;">
-            <button class="buttonTitle ms-4">Control-P</button>
-            <form class="d-flex">
-                <button  class="buttonHome me-4" data-bs-toggle="modal" data-bs-target="#exampleModalLogin" type="button">
-                    <span>
-                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                        </svg>
-                    </span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Login
-                </button>
-            </form>
-        </div>
-
-<!--MODAL LOGIN-->
-
+<!-- Modal Login-->
 <div class="modal fade" id="exampleModalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="container">
@@ -33,11 +31,66 @@
                             <button type="button" class="btn-close position-absolute top-0 start-100 translate-middle" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <h2>Login</h2>
-                        <input name="username" type="text" class="field" placeholder="User">
-                        <input name="password" type="password" class="field" placeholder="Password">
+                            <input name="user" type="text" class="field" placeholder="User">
+                            <input name="pass" type="password" class="field" placeholder="Password">
                         <div class="modal-footer">
                             <button class="btn" data-bs-dismiss="modal">Login</button>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Login-->
+
+<div class="modal fade" id="exampleModalregister" tabindex="-1" aria-labelledby="examp  leModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="container">
+            <div class="modal-content">
+                <div class="contact-box2">
+                    <div class="right">
+                        <div class="position-relative">
+                            <button  type="button" class="btn-close position-absolute top-0 start-100 translate-middle" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <h2>Register</h2>
+                        <form #registerForm>
+                            <div>
+                                <input  name="username" type="text" class="field" placeholder="Username" required >
+                            </div>
+                            <div>
+                                <input  name="age" type="text" class="field" placeholder="Age" required >
+                            </div>
+                            <div>
+                                <input  name="country" type="text" class="field" placeholder="Country" required >
+                            </div>
+                            <div>
+                                <input name="email" type="text" class="field" placeholder="Email" required>
+                            </div>
+                            <div>
+                                <input name="password" type="password" class="field" placeholder="Password" required >
+                            </div>
+                            <h2>Favorite Genres</h2>
+                            <!-- Checkbox para géneros de películas -->
+                                <input type="checkbox" id="horror" name="genre" value="Horror" class="checkbox-input">
+                                <label for="horror" class="checkbox-label">Horror</label>
+                            
+                                <input type="checkbox" id="comedy" name="genre" value="Comedy" class="checkbox-input">
+                                <label for="comedy" class="checkbox-label">Comedy</label>
+                            
+                                <input type="checkbox" id="sci-fi" name="genre" value="Sci-Fi" class="checkbox-input">
+                                <label for="sci-fi" class="checkbox-label">Sci-Fi</label>
+         
+                                <input type="checkbox" id="drama" name="genre" value="Drama" class="checkbox-input">
+                                <label for="drama" class="checkbox-label">Drama</label>
+                  
+                                <input type="checkbox" id="action" name="genre" value="Action" class="checkbox-input">
+                                <label for="action" class="checkbox-label">Action</label>
+                                
+                            <!-- Botón de guardar -->
+                            <button class="btn" data-bs-dismiss="modal">Save</button>
+                        </form>
                     </div>
                 </div>
             </div>

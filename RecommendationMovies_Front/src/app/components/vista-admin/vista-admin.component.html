@@ -1,0 +1,219 @@
+
+    <div class="body fondo">
+    
+    <app-nav-bar></app-nav-bar>
+    
+    <div class="d-flex justify-content-around mt-5 my-5 mx-5">
+
+        <div class="genre">
+            <div class="card me-3 mt-3 ms-3" style="width: 18rem;">
+                <img class="card-img-top" src="../../../assets/img/Gender.jpg" alt="Imagen Empresa">
+                <div class="card-body">
+                    <h5 class="card-title"><strong></strong></h5>
+                    <!-- Modal 1 -->
+                    <button class="buttonHome ms-3" data-bs-toggle="modal" data-bs-target="#exampleModalGenre" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Add Genre
+                    </button>
+    
+                </div>
+            </div>
+        </div>
+
+        <div class="actor">
+            <div class="card me-3 mt-3 ms-3" style="width: 18rem;">
+                <img class="card-img-top" src="../../../assets/img/Actor.jpg" alt="Imagen Empresa">
+                <div class="card-body">
+                    <h5 class="card-title"><strong></strong></h5>
+                    <!-- Modal 2 -->
+                    <button class="buttonHome ms-3" data-bs-toggle="modal" data-bs-target="#exampleModalActor" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Add Actor
+                    </button>
+    
+                </div>
+            </div>
+        </div>
+
+        <div class="director">
+            <div class="card me-3 mt-3 ms-3" style="width: 18rem;">
+                <img class="card-img-top" src="../../../assets/img/Director2.jpg" alt="Imagen Empresa">
+                <div class="card-body">
+                    <h5 class="card-title"><strong></strong></h5>
+                    <!-- Modal 3 -->
+                    <button class="buttonHome ms-3" data-bs-toggle="modal" data-bs-target="#exampleModalDirector" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Add Director
+                    </button>
+    
+                </div>
+            </div>
+        </div>
+
+        <div class="movie">
+            <div class="card me-3 mt-3 ms-3" style="width: 18rem;">
+                <img class="card-img-top" src="../../../assets/img/poster.jpg" alt="Imagen Empresa">
+                <div class="card-body">
+                    <h5 class="card-title"><strong></strong></h5>
+                    <!-- Modal 4 -->
+                    <button class="buttonHome ms-3" data-bs-toggle="modal" data-bs-target="#exampleModalPelicula" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Add Movie
+                    </button>
+    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+   
+    <section class="functions">
+
+        <!-- MODAL PARA AGREGAR -->
+        <!-- MODAL PARA GENERO -->
+        <div class="modal fade" id="exampleModalGenre" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="container">
+                    <div class="modal-content">
+                        <div class="contact-box">
+                            <div class="left"></div>
+                            <div class="right">
+                                <div class="position-relative">
+                                    <button  type="button" class="btn-close position-absolute top-0 start-100 translate-middle" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <h2>Add</h2>
+                                <form #registerForm>
+                                    <div>
+                                        <input  name="name" type="text" class="field" placeholder="Name" required >
+                                    </div>
+                                    <div>
+                                        <input  name="description" type="text" class="field" placeholder="Description" required >
+                                    </div>
+                                    <div>
+                                        <input name="popularity" type="text" class="field" placeholder="Popularity" required>
+                                    </div>
+                                    <button class="btn" data-bs-dismiss="modal">Save</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL PARA ACTOR -->
+        <div class="modal fade" id="exampleModalActor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="container">
+                    <div class="modal-content">
+                        <div class="contact-box">
+                            <div class="left"></div>
+                            <div class="right">
+                                <div class="position-relative">
+                                    <button  type="button" class="btn-close position-absolute top-0 start-100 translate-middle" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <h2>Add</h2>
+                                <form #registerForm>
+                                    <div>
+                                        <input  name="name" type="text" class="field" placeholder="Name" required >
+                                    </div>
+                                    <div>
+                                        <input  name="birth date" type="text" class="field" placeholder="Birth date" required >
+                                    </div>
+                                    <div>
+                                        <input  name="nationality" type="text" class="field" placeholder="Nationality" required >
+                                    </div>
+                                    <button class="btn" data-bs-dismiss="modal">Save</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL PARA DIRECTOR -->
+        <div class="modal fade" id="exampleModalDirector" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="container">
+                    <div class="modal-content">
+                        <div class="contact-box">
+                            <div class="left"></div>
+                            <div class="right">
+                                <div class="position-relative">
+                                    <button  type="button" class="btn-close position-absolute top-0 start-100 translate-middle" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <h2>Add</h2>
+                                <form #registerForm>
+                                    <div>
+                                        <input  name="name" type="text" class="field" placeholder="Name" required >
+                                    </div>
+                                    <div>
+                                        <input  name="birth date" type="text" class="field" placeholder="Birth date" required >
+                                    </div>
+                                    <div>
+                                        <input  name="nationality" type="text" class="field" placeholder="Nationality" required >
+                                    </div>
+                                    <button class="btn" data-bs-dismiss="modal">Save</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL PARA Pelicula -->
+        <div class="modal fade" id="exampleModalPelicula" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="container">
+                    <div class="modal-content">
+                        <div class="contact-box">
+                            <div class="left"></div>
+                            <div class="right">
+                                <div class="position-relative">
+                                    <button  type="button" class="btn-close position-absolute top-0 start-100 translate-middle" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <h2>Register</h2>
+                                <form #registerForm>
+                                    <div>
+                                        <input  name="title" type="text" class="field" placeholder="Title" required >
+                                    </div>
+                                    <div>
+                                        <input  name="duration minutes" type="text" class="field" placeholder="Duration minutes" required >
+                                    </div>
+                                    <div>
+                                        <input name="rating" type="text" class="field" placeholder="Rating" required>
+                                    </div>
+                                    <div>
+                                        <input name="release year" type="text" class="field" placeholder="Release year" required>
+                                    </div>
+                                    <button class="btn" data-bs-dismiss="modal">Save</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <br>
+
+</div>
+
+

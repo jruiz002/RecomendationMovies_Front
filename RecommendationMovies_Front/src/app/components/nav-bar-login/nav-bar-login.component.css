@@ -1,56 +1,65 @@
-/*
-NAVBAR
-*/
+/* ESTILOS PARA EL TÍTULO */
+a{
+    color: #DBD5B5;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: .5s;
+}
+
+/* --------------------------------------------------- */
+
 /* ESTILOS PARA LOS BOTONES DEL LOGIN */
 .buttonHome{
     position: relative;
     padding: 10px 15px;
-    outline: none;
-    background: #457B9D;
-    color: #fff;
     border: none;
+    outline: none;
+    background: #ffd60a;
+    color: #001d3d;
     cursor: pointer;
     transition: .5s;
     overflow: hidden;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     border-radius: 5px;
-    width: 8rem;
+    width: 9rem;
+	margin-right: 20px;
 }
 
-.buttonHome:hover{
-    color: #E63946;
-    background-color: #F1FAEE;
+button span{
+    position: absolute;
+    background: #9a031e;
+    transition: .5s;
+    border-radius: 5px;
 }
 
-.buttonTitle{
-    border: none;
-    font-size: 1.5rem;
-    background-color: #457b9d00;
-    color: #F1FAEE;
+button span:nth-child(1) {
+    width: 100%;
+    height: 3px;
+    top: 0;
+    left: -100%;
 }
 
-.buttonTitle:hover{
-    color: #F1FAEE;
+button span:nth-child(2) {
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    right: -100%;
 }
 
-
-.tituloHome{
-    color: black;
+button:hover span:nth-child(1){
+    left: 0;
+    background: #9a031e;
+    color: #9a031e;
 }
 
-.tituloHome:hover{
-    color: rgba(0, 0, 0, 0.651);
+button:hover span:nth-child(2){
+    right: 0;
+    background: #9a031e;
+    color: #9a031e;
 }
+/* --------------------------------------------------- */
 
-.sombra{
-    -webkit-box-shadow: 0px 7px 15px 5px rgba(0,0,0,0.27); 
-    box-shadow: 0px 7px 15px 5px rgba(0,0,0,0.27);
-}
-
-/*
-    MODAL DEL LOGIN
-*/
-
+/* ESTILOS PARA EL MODAL DE LOGIN*/
 .container{
 	position: relative;
 	width: 100%;
@@ -83,8 +92,19 @@ NAVBAR
 	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
 }
 
+.contact-box2{
+	max-width: 850px;
+	display: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+
 .left{
-	background: url("../../../assets/img/login.jpg") no-repeat center;
+	background: url("../../../assets/img/LoginRegisterpicture.jpg") no-repeat center;
 	background-size: cover;
 	height: 100%;
 }
@@ -92,6 +112,7 @@ NAVBAR
 .right{
 	padding: 25px 40px;
 }
+
 
 h2{
 	position: relative;
@@ -165,4 +186,59 @@ textarea{
     display: flex;
     align-items: flex-start;
 	font-size: 0.75rem;
+}
+
+/* Estilos para los checkboxes */
+
+.checkbox-label {
+    margin-left: 35px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.checkbox-input {
+    /* Opcional: Si deseas que los checkboxes tengan un ancho uniforme, puedes especificar un ancho fijo */
+    width: 20px;
+    height: 20px;
+}
+
+/* Estilo cuando el checkbox está marcado */
+.checkbox-input:checked + .checkbox-label::before {
+    content: '\2713'; /* símbolo de marca de verificación */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background-color: #9a031e; /* Color cuando está marcado */
+    color: #fff;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.checkbox-input {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Estilo básico para el contenedor del checkbox */
+.checkbox-label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #9a031e; /* Borde básico */
+    border-radius: 3px;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Estilo cuando el checkbox está marcado y se pasa el mouse sobre él */
+.checkbox-label:hover::before {
+    background-color: #7a0217; /* Color más oscuro cuando se pasa el mouse */
+    border-color: #7a0217;
 }
