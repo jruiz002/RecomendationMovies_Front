@@ -161,7 +161,6 @@ button:hover span:nth-child(2){
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 }
 
 .container:after{
@@ -199,7 +198,8 @@ button:hover span:nth-child(2){
 h2{
 	position: relative;
 	padding: 0 0 10px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
+    font-size: 2em !important;
 }
 
 
@@ -212,14 +212,15 @@ h2:after{
     height: 4px;
     width: 50px;
     border-radius: 2px;
-    background-color: #D62D2D;
+    background-color: #462dd6;
 }
 
 h3{
 	position: relative;
 	padding: 0 0 10px;
 	margin-bottom: 10px;
-    color: #fff;
+    color: #ffffff;
+    font-size: 2.5em!important;
 }
 
 
@@ -232,7 +233,28 @@ h3:after{
     height: 4px;
     width: 50px;
     border-radius: 2px;
-    background-color: #2369d1;
+    background-color: #ffffff;
+}
+
+h4{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 2px;
+    color: #060855;
+    font-size: 1.4em !important;
+}
+
+
+h4:after{
+	content: '';
+    position: relative;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #ffffff;
 }
 
 .field{
@@ -257,17 +279,19 @@ textarea{
 .btn{
 	width: 100%;
 	padding: 0.5rem 1rem;
-	background-color: #9a031e;
+	background-color: #001d3d;
 	color: #fff;
 	font-size: 1.1rem;
 	border: none;
 	outline: none;
 	cursor: pointer;
 	transition: .3s;
+    min-width: 50px; 
+    max-width: 115px; 
 }
 
 .btn:hover{
-    background-color: #D62D2D;
+    background-color: #666dd9;
 }
 
 .field:focus{
@@ -289,4 +313,20 @@ textarea{
     display: flex;
     align-items: flex-start;
 	font-size: 0.75rem;
+}
+
+.buttonModalNewUser{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #001d3d;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.buttonModalNewUser:hover{
+    background-color: #343a59;
 }
