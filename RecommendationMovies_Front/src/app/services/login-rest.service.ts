@@ -19,4 +19,8 @@ export class LoginRestService {
     return this.http.post(environment.baseUri + "user/login", params, {headers: this.htppOptions} )
   }
 
+  register(params: {}){
+    return this.http.post(environment.baseUri + "user/register", params, {headers: this.htppOptions} )
+  }
+
 }
