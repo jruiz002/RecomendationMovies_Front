@@ -7,7 +7,9 @@ import {VistaRecomendacionComponent} from './components/vista-recomendacion/vist
 const routes: Routes = [
     //GENERAL
     {path:'', component:HomeComponent},
-    {path:'home', component:HomeComponent}
+    {path:'home', component:HomeComponent},
+    {path:'vistaAdmin', component: VistaAdminComponent},
+    {path:"recomendaciones", component: VistaRecomendacionComponent}
 ];
 
 @NgModule({

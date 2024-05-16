@@ -31,10 +31,10 @@
                             <button type="button" class="btn-close position-absolute top-0 start-100 translate-middle" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <h2>Login</h2>
-                            <input name="user" type="text" class="field" placeholder="User">
-                            <input name="pass" type="password" class="field" placeholder="Password">
+                            <input [(ngModel)]="this.dataLogin.username" name="user" type="text" class="field" placeholder="User">
+                            <input [(ngModel)]="this.dataLogin.password" name="pass" type="password" class="field" placeholder="Password">
                         <div class="modal-footer">
-                            <button class="btn" data-bs-dismiss="modal">Login</button>
+                            <button (click)="login()" class="btn" data-bs-dismiss="modal">Login</button>
                         </div>
                     </div>
                 </div>
