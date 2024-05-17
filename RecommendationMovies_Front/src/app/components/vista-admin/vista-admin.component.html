@@ -94,18 +94,18 @@
                                 <div class="position-relative">
                                     <button  type="button" class="btn-close position-absolute top-0 start-100 translate-middle" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <h2>Add</h2>
+                                <h2>Add Genre</h2>
                                 <form #registerForm>
                                     <div>
-                                        <input  name="name" type="text" class="field" placeholder="Name" required >
+                                        <input [(ngModel)]="this.genre.name"  name="name" type="text" class="field" placeholder="Name" required >
                                     </div>
                                     <div>
-                                        <input  name="description" type="text" class="field" placeholder="Description" required >
+                                        <input [(ngModel)]="this.genre.description"   name="description" type="text" class="field" placeholder="Description" required >
                                     </div>
                                     <div>
-                                        <input name="popularity" type="text" class="field" placeholder="Popularity" required>
+                                        <input [(ngModel)]="this.genre.popularity" name="popularity" type="text" class="field" placeholder="Popularity" required>
                                     </div>
-                                    <button class="btn" data-bs-dismiss="modal">Save</button>
+                                    <button (click)="createGenre()" class="btn" data-bs-dismiss="modal">Save</button>
                                 </form>
                             </div>
                         </div>
@@ -125,18 +125,18 @@
                                 <div class="position-relative">
                                     <button  type="button" class="btn-close position-absolute top-0 start-100 translate-middle" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <h2>Add</h2>
+                                <h2>Add Actor</h2>
                                 <form #registerForm>
                                     <div>
-                                        <input  name="name" type="text" class="field" placeholder="Name" required >
+                                        <input [(ngModel)]="this.actor.name"   name="name" type="text" class="field" placeholder="Name" required >
                                     </div>
                                     <div>
-                                        <input  name="birth date" type="text" class="field" placeholder="Birth date" required >
+                                        <input [(ngModel)]="this.actor.birth_date"  name="birth date" type="text" class="field" placeholder="Birth date" required >
                                     </div>
                                     <div>
-                                        <input  name="nationality" type="text" class="field" placeholder="Nationality" required >
+                                        <input [(ngModel)]="this.actor.nationality" name="nationality" type="text" class="field" placeholder="Nationality" required >
                                     </div>
-                                    <button class="btn" data-bs-dismiss="modal">Save</button>
+                                    <button (click)="createActor()" class="btn" data-bs-dismiss="modal">Save</button>
                                 </form>
                             </div>
                         </div>
@@ -156,18 +156,18 @@
                                 <div class="position-relative">
                                     <button  type="button" class="btn-close position-absolute top-0 start-100 translate-middle" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <h2>Add</h2>
+                                <h2>Add Director</h2>
                                 <form #registerForm>
                                     <div>
-                                        <input  name="name" type="text" class="field" placeholder="Name" required >
+                                        <input [(ngModel)]="this.director.name" name="name" type="text" class="field" placeholder="Name" required >
                                     </div>
                                     <div>
-                                        <input  name="birth date" type="text" class="field" placeholder="Birth date" required >
+                                        <input [(ngModel)]="this.director.birth_date" name="birth date" type="text" class="field" placeholder="Birth date" required >
                                     </div>
                                     <div>
-                                        <input  name="nationality" type="text" class="field" placeholder="Nationality" required >
+                                        <input [(ngModel)]="this.director.nationality"  name="nationality" type="text" class="field" placeholder="Nationality" required >
                                     </div>
-                                    <button class="btn" data-bs-dismiss="modal">Save</button>
+                                    <button (click)="createDirector()" class="btn" data-bs-dismiss="modal">Save</button>
                                 </form>
                             </div>
                         </div>
@@ -187,21 +187,21 @@
                                 <div class="position-relative">
                                     <button  type="button" class="btn-close position-absolute top-0 start-100 translate-middle" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <h2>Register</h2>
+                                <h2>Add Movie</h2>
                                 <form #registerForm>
                                     <div>
-                                        <input  name="title" type="text" class="field" placeholder="Title" required >
+                                        <input [(ngModel)]="this.movie.title"  name="title" type="text" class="field" placeholder="Title" required >
                                     </div>
                                     <div>
-                                        <input  name="duration minutes" type="text" class="field" placeholder="Duration minutes" required >
+                                        <input [(ngModel)]="this.movie.duration_minutes"   name="duration minutes" type="text" class="field" placeholder="Duration minutes" required >
                                     </div>
                                     <div>
-                                        <input name="rating" type="text" class="field" placeholder="Rating" required>
+                                        <input [(ngModel)]="this.movie.rating"  name="rating" type="text" class="field" placeholder="Rating" required>
                                     </div>
                                     <div>
-                                        <input name="release year" type="text" class="field" placeholder="Release year" required>
+                                        <input [(ngModel)]="this.movie.release_year"  name="release year" type="text" class="field" placeholder="Release year" required>
                                     </div>
-                                    <button class="btn" data-bs-dismiss="modal">Save</button>
+                                    <button (click)="createMovie()" class="btn" data-bs-dismiss="modal">Save</button>
                                 </form>
                             </div>
                         </div>
