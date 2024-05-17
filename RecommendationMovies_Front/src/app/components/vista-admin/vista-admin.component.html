@@ -239,17 +239,19 @@
                                 <h2>Relación Genre-Movie</h2>
                                 <form #registerForm>
                                     <div>
-                                        <select name="Genre" class="field" required>
-                                            <option value="" disabled selected>todos los generos</option>
-                                          
+                                        <select [(ngModel)]="this.dataMovieGenre.genre" name="Genre" class="field" required>
+                                            <option value="" disabled selected>Géneros</option>
+                                            <option  *ngFor="let genre of this.genres" [value]="genre.name">{{genre.name}}</option>
+                                            
                                         </select>
                                     </div>
                                     <div>
-                                        <select name="Movie" class="field" required>
-                                            <option value="" disabled selected>todas las pelis</option>
+                                        <select [(ngModel)]="this.dataMovieGenre.title" name="Movie" class="field" required>
+                                            <option value="" disabled selected>Películas</option>
+                                            <option *ngFor="let movie of this.movies" [value]="movie.title">{{movie.title}}</option>
                                         </select>
                                     </div>
-                                    <button class="btn" data-bs-dismiss="modal">Save</button>
+                                    <button (click)="this.relationMovieGenre()" class="btn" data-bs-dismiss="modal">Save</button>
                                 </form>
                             </div>
                         </div>
@@ -272,17 +274,18 @@
                                 <h2>Relación Actor-Movie</h2>
                                 <form #registerForm>
                                     <div>
-                                        <select name="Genre" class="field" required>
-                                            <option value="" disabled selected>todos los actores</option>
-                                          
+                                        <select [(ngModel)]="this.dataMovieActor.actor" name="Genre" class="field" required>
+                                            <option value="" disabled selected>Actores</option>
+                                            <option *ngFor="let actor of this.actors" [value]="actor.name">{{actor.name}}</option>
                                         </select>
                                     </div>
                                     <div>
-                                        <select name="Movie" class="field" required>
-                                            <option value="" disabled selected>todas las pelis</option>
+                                        <select [(ngModel)]="this.dataMovieActor.title" name="Movie" class="field" required>
+                                            <option value="" disabled selected>Películas</option>
+                                            <option *ngFor="let movie of this.movies" [value]="movie.title">{{movie.title}}</option>
                                         </select>
                                     </div>
-                                    <button class="btn" data-bs-dismiss="modal">Save</button>
+                                    <button (click)="relationMovieActor()" class="btn" data-bs-dismiss="modal">Save</button>
                                 </form>
                             </div>
                         </div>
@@ -306,17 +309,19 @@
                                 <h2>Relación Director-Movie</h2>
                                 <form #registerForm>
                                     <div>
-                                        <select name="Genre" class="field" required>
-                                            <option value="" disabled selected>todos los directores</option>
+                                        <select [(ngModel)]="this.dataMovieDirector.director" name="Genre" class="field" required>
+                                            <option value="" disabled selected>Directores</option>
+                                            <option *ngFor="let director of this.directors" [value]="director.name">{{director.name}}</option>
                                           
                                         </select>
                                     </div>
                                     <div>
-                                        <select name="Movie" class="field" required>
-                                            <option value="" disabled selected>todas las pelis</option>
+                                        <select [(ngModel)]="this.dataMovieDirector.title" name="Movie" class="field" required>
+                                            <option value="" disabled selected>Películas</option>
+                                            <option *ngFor="let movie of this.movies" [value]="movie.title">{{movie.title}}</option>
                                         </select>
                                     </div>
-                                    <button class="btn" data-bs-dismiss="modal">Save</button>
+                                    <button (click)="relationMovieDirector()" class="btn" data-bs-dismiss="modal">Save</button>
                                 </form>
                             </div>
                         </div>

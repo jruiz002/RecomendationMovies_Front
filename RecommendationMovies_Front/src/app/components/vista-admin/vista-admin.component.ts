@@ -19,6 +19,10 @@ export class VistaAdminComponent {
   actor: ActorModel
   director: DirectorModel
   movie: MovieModel
+  actors: any[] = []
+  directors: any[] = []
+  genres: any[] = []
+  movies: any[] = []
 
 
   constructor(
@@ -34,7 +38,153 @@ export class VistaAdminComponent {
 
   
   ngOnInit(): void {
-    
+    this.getActors();
+    this.getDirectors();  
+    this.getGenres();
+    this.getMovies()
+  }
+
+  dataMovieDirector = {
+    title: "",
+    director: ""
+  }
+
+  relationMovieDirector(){
+    this.adminRest.relationMovieDirector(this.dataMovieDirector).subscribe({
+      next:(res:any)=>{
+        Swal.fire({
+          title: res.message,
+          icon: 'success',
+          showConfirmButton: false
+        });
+      },
+      error: (err) => {
+        Swal.fire({
+          title: err.error.message || err.error,
+          icon: 'error',
+          showConfirmButton: false,
+          timer: 2000
+        });
+      }
+    })
+  }
+
+  dataMovieActor = {
+    title: "",
+    actor: ""
+  }
+
+  relationMovieActor(){
+    this.adminRest.relationMovieActor(this.dataMovieActor).subscribe({
+      next:(res:any)=>{
+        Swal.fire({
+          title: res.message,
+          icon: 'success',
+          showConfirmButton: false
+        });
+      },
+      error: (err) => {
+        Swal.fire({
+          title: err.error.message || err.error,
+          icon: 'error',
+          showConfirmButton: false,
+          timer: 2000
+        });
+      }
+    })
+  }
+
+  dataMovieGenre = {
+    title: "",
+    genre: ""
+  }
+
+  relationMovieGenre(){
+    this.adminRest.relationMovieGenre(this.dataMovieGenre).subscribe({
+      next:(res:any)=>{
+        Swal.fire({
+          title: res.message,
+          icon: 'success',
+          showConfirmButton: false
+        });
+      },
+      error: (err) => {
+        Swal.fire({
+          title: err.error.message || err.error,
+          icon: 'error',
+          showConfirmButton: false,
+          timer: 2000
+        });
+      }
+    })
+
+  }
+
+  getMovies(){
+    this.adminRest.getMovies().subscribe({
+      next: (res: any) => {
+        this.movies = res.movies
+        
+      },
+      error: (err) => {
+        Swal.fire({
+          title: err.error.message || err.error,
+          icon: 'error',
+          showConfirmButton: false,
+          timer: 2000
+        });
+      }
+    })
+  }
+
+  getGenres(){
+    this.adminRest.getGenres().subscribe({
+      next: (res: any) => {
+        this.genres = res.genres
+        
+      },
+      error: (err) => {
+        Swal.fire({
+          title: err.error.message || err.error,
+          icon: 'error',
+          showConfirmButton: false,
+          timer: 2000
+        });
+      }
+    })
+  }
+
+  getDirectors(){
+    this.adminRest.getDirectos().subscribe({
+      next: (res: any) => {
+        this.directors = res.directors
+        
+      },
+      error: (err) => {
+        Swal.fire({
+          title: err.error.message || err.error,
+          icon: 'error',
+          showConfirmButton: false,
+          timer: 2000
+        });
+      }
+    })
+  }
+
+  getActors(){
+    this.adminRest.getActors().subscribe({
+      next: (res: any) => {
+        this.actors = res.actors
+      },
+      error: (err) => {
+        Swal.fire({
+          title: err.error.message || err.error,
+          icon: 'error',
+          showConfirmButton: false,
+          timer: 2000
+        });
+      }
+    })
   }
 
   createGenre(){
