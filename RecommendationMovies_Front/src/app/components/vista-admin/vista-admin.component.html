@@ -227,7 +227,7 @@
         <!--Modal para agregar las relaciones-->
          <!--Modal para Genre Movie -->
 
-         <div class="modal fade" id="exampleModalRelacion1" tabindex="-1" aria-labelledby="examp  leModalLabel" aria-hidden="true">
+         <div class="modal fade" id="exampleModalRelacion1" tabindex="-1" aria-labelledby="examp  leModalLabel" aria-hidden="true" (hidden.bs.modal)="resetFormMG()">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="container">
                     <div class="modal-content">
@@ -251,7 +251,7 @@
                                             <option *ngFor="let movie of this.movies" [value]="movie.title">{{movie.title}}</option>
                                         </select>
                                     </div>
-                                    <button (click)="this.relationMovieGenre()" class="btn" data-bs-dismiss="modal">Save</button>
+                                    <button (click)="this.relationMovieGenre()" class="btn" [disabled]="!isFormValidMG()" data-bs-dismiss="modal">Save</button>
                                 </form>
                             </div>
                         </div>
@@ -262,7 +262,7 @@
 
          <!--Modal para Actor Movie -->
 
-         <div class="modal fade" id="exampleModalRelacion2" tabindex="-1" aria-labelledby="examp  leModalLabel" aria-hidden="true">
+         <div class="modal fade" id="exampleModalRelacion2" tabindex="-1" aria-labelledby="examp  leModalLabel" aria-hidden="true" (hidden.bs.modal)="resetFormMA()">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="container">
                     <div class="modal-content">
@@ -285,7 +285,7 @@
                                             <option *ngFor="let movie of this.movies" [value]="movie.title">{{movie.title}}</option>
                                         </select>
                                     </div>
-                                    <button (click)="relationMovieActor()" class="btn" data-bs-dismiss="modal">Save</button>
+                                    <button (click)="relationMovieActor()" class="btn" [disabled]="!isFormValidMA()" data-bs-dismiss="modal">Save</button>
                                 </form>
                             </div>
                         </div>
@@ -297,7 +297,7 @@
 
          <!--Modal para Director Movie -->
 
-         <div class="modal fade" id="exampleModalRelacion3" tabindex="-1" aria-labelledby="examp  leModalLabel" aria-hidden="true">
+         <div class="modal fade" id="exampleModalRelacion3" tabindex="-1" aria-labelledby="examp  leModalLabel" aria-hidden="true" (hidden.bs.modal)="resetFormMD()">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="container">
                     <div class="modal-content">
@@ -321,7 +321,7 @@
                                             <option *ngFor="let movie of this.movies" [value]="movie.title">{{movie.title}}</option>
                                         </select>
                                     </div>
-                                    <button (click)="relationMovieDirector()" class="btn" data-bs-dismiss="modal">Save</button>
+                                    <button (click)="relationMovieDirector()" class="btn" [disabled]="!isFormValidMD()" data-bs-dismiss="modal">Save</button>
                                 </form>
                             </div>
                         </div>

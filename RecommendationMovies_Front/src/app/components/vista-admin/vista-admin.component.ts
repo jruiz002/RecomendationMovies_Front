@@ -49,14 +49,24 @@ export class VistaAdminComponent {
     director: ""
   }
 
+  isFormValidMD(): boolean {
+    return this.dataMovieDirector.director !== '' && this.dataMovieDirector.title !== '';
+  }
+
+  resetFormMD() {
+    this.dataMovieDirector = { director: '', title: '' };
+  }
+
   relationMovieDirector(){
     this.adminRest.relationMovieDirector(this.dataMovieDirector).subscribe({
+      
       next:(res:any)=>{
         Swal.fire({
           title: res.message,
           icon: 'success',
           showConfirmButton: false
         });
+        this.resetFormMD();
       },
       error: (err) => {
         Swal.fire({
@@ -74,6 +84,14 @@ export class VistaAdminComponent {
     actor: ""
   }
 
+  isFormValidMA(): boolean {
+    return this.dataMovieActor.actor !== '' && this.dataMovieActor.title !== '';
+  }
+  resetFormMA() {
+    this.dataMovieActor = { actor: '', title: '' };
+  }
+  
+
   relationMovieActor(){
     this.adminRest.relationMovieActor(this.dataMovieActor).subscribe({
       next:(res:any)=>{
@@ -82,6 +100,7 @@ export class VistaAdminComponent {
           icon: 'success',
           showConfirmButton: false
         });
+        this.resetFormMA();
       },
       error: (err) => {
         Swal.fire({
@@ -99,6 +118,13 @@ export class VistaAdminComponent {
     genre: ""
   }
 
+  isFormValidMG(): boolean {
+    return this.dataMovieGenre.genre !== '' && this.dataMovieGenre.title !== '';
+  }
+  resetFormMG() {
+    this.dataMovieGenre = { genre: '', title: '' };
+  }
+
   relationMovieGenre(){
     this.adminRest.relationMovieGenre(this.dataMovieGenre).subscribe({
       next:(res:any)=>{
@@ -107,6 +133,7 @@ export class VistaAdminComponent {
           icon: 'success',
           showConfirmButton: false
         });
+        this.resetFormMG();
       },
       error: (err) => {
         Swal.fire({
