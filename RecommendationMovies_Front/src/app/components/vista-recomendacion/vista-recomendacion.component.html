@@ -13,11 +13,11 @@
                     <div class="card-body">
                         <h2 class="card-title"><strong>{{genre.title}}</strong></h2>
                         <h4 class="card-title"><strong>Rating: {{genre.rating}}</strong></h4>
-                        <h4 class="card-title"><strong>Release Year: {{genre.release_year.low}}</strong></h4>
-                        <h4 class="card-title"><strong>Duratiom Minutes: {{genre.duration_minutes.low}}</strong></h4>
+                        <h4 class="card-title"><strong>Release Year: {{genre.release_year}}</strong></h4>
+                        <h4 class="card-title"><strong>Duratiom Minutes: {{genre.duration_minutes}}</strong></h4>
                         <!-- Boton check -->
-                        <button (click)="this.catchData(genre.title)" data-bs-target="#modalVerPelicula" data-bs-toggle="modal" type="button" class="btn btn-link"><img src="../../../assets/img/check3.png" alt="#"
-                                class="img-icon"></button>
+                        <div class="button-container"><button (click)="this.catchData(genre.title)" data-bs-target="#modalVerPelicula" data-bs-toggle="modal" type="button" class="btn btn-link"><img src="../../../assets/img/check3.png" alt="#"
+                            class="img-icon"></button></div>
                     </div>
                 </div>
             </div>
@@ -33,11 +33,11 @@
                     <div class="card-body">
                         <h2 class="card-title"><strong>{{actor.title}}</strong></h2>
                         <h4 class="card-title"><strong>Rating: {{actor.rating}}</strong></h4>
-                        <h4 class="card-title"><strong>Release Year: {{actor.release_year.low}}</strong></h4>
-                        <h4 class="card-title"><strong>Duratiom Minutes: {{actor.duration_minutes.low}}</strong></h4>
+                        <h4 class="card-title"><strong>Release Year: {{actor.release_year}}</strong></h4>
+                        <h4 class="card-title"><strong>Duratiom Minutes: {{actor.duration_minutes}}</strong></h4>
                         <!-- Boton check -->
-                        <button (click)="this.catchData(actor.title)" data-bs-target="#modalVerPelicula" data-bs-toggle="modal" type="button" class="btn btn-link"><img src="../../../assets/img/check3.png" alt="#"
-                                class="img-icon"></button>
+                        <div class="button-container"><button (click)="this.catchData(actor.title)" data-bs-target="#modalVerPelicula" data-bs-toggle="modal" type="button" class="btn btn-link"><img src="../../../assets/img/check3.png" alt="#"
+                            class="img-icon"></button></div>
                     </div>
                 </div>
             </div>
@@ -52,11 +52,11 @@
                     <div class="card-body">
                         <h2 class="card-title"><strong>{{director.title}}</strong></h2>
                         <h4 class="card-title"><strong>Rating: {{director.rating}}</strong></h4>
-                        <h4 class="card-title"><strong>Release Year: {{director.release_year.low}}</strong></h4>
-                        <h4 class="card-title"><strong>Duratiom Minutes: {{director.duration_minutes.low}}</strong></h4>
+                        <h4 class="card-title"><strong>Release Year: {{director.release_year}}</strong></h4>
+                        <h4 class="card-title"><strong>Duratiom Minutes: {{director.duration_minutes}}</strong></h4>
                         <!-- Boton check -->
-                        <button (click)="this.catchData(director.title)" data-bs-target="#modalVerPelicula" data-bs-toggle="modal" type="button" class="btn btn-link"><img src="../../../assets/img/check3.png" alt="#"
-                                class="img-icon"></button>
+                        <div class="button-container"><button (click)="this.catchData(director.title)" data-bs-target="#modalVerPelicula" data-bs-toggle="modal" type="button" class="btn btn-link"><img src="../../../assets/img/check3.png" alt="#"
+                            class="img-icon"></button></div>
                     </div>
                 </div>
             </div>

@@ -53,11 +53,8 @@ div img{
     background-color: rgb(200, 200, 200);
     border-radius: 15px;
     padding: 22px;
-    width: 95px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    width: 18rem;
+    margin: 10px;
 }
 
 .card-img-top{
@@ -203,18 +200,6 @@ h2{
 }
 
 
-h2:after{
-	content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    height: 4px;
-    width: 50px;
-    border-radius: 2px;
-    background-color: #462dd6;
-}
-
 h3{
 	position: relative;
 	padding: 0 0 10px;
@@ -329,4 +314,23 @@ textarea{
 
 .buttonModalNewUser:hover{
     background-color: #343a59;
+}
+
+/* Añadido para distribuir las cards en filas */
+@media (min-width: 768px) {
+    .d-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .d-flex .empresas {
+        flex-basis: calc(25% - 20px);
+        margin-bottom: 20px;
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
 }
