@@ -261,6 +261,7 @@ textarea{
 	min-height: 150px;
 }
 
+/* ------------------------------------------------------------------------------------------------------------------------------------*/
 .btn{
 	width: 100%;
 	padding: 0.5rem 1rem;
@@ -276,6 +277,27 @@ textarea{
 }
 
 .btn:hover{
+    background-color: #666dd9;
+}
+
+.btn2{
+	padding: 15px 25px; /* Aumenta el padding para hacer el botón más grande */
+    background: #08044c;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente */
+    border-radius: 5px;
+    width: auto; /* Ajusta el ancho automáticamente */
+    margin-right: 20px;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn2:hover{
     background-color: #666dd9;
 }
 

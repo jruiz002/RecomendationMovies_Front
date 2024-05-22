@@ -26,6 +26,10 @@ export class DirectorComponent {
     this.funcRecommendationDirector()
   }
 
+  backToMain(){
+    this.router.navigateByUrl("/recomendaciones")
+  }
+
   funcRecommendationDirector() {
     this.recommendationService.funcRecommendationDirector(this.loginRest.getUser()).subscribe({
       next: (res: any) => {        

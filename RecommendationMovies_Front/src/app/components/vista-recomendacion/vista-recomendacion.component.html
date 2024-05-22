@@ -5,65 +5,73 @@
 
         <!-- Género -->
         <h3>Género</h3>
-        <div class="d-flex justify-content-start mt-3">
-
-            <div *ngFor="let genre of this.moviesUserGenre" class="empresas row">
-                <div class="card me-3 mt-3 ms-3" style="width: 18rem;">
-                    <img class="card-img-top" src="../../../assets/img/gen.jpg" alt="Imagen Empresa">
-                    <div class="card-body">
-                        <h2 class="card-title"><strong>{{genre.title}}</strong></h2>
-                        <h4 class="card-title"><strong>Rating: {{genre.rating}}</strong></h4>
-                        <h4 class="card-title"><strong>Release Year: {{genre.release_year}}</strong></h4>
-                        <h4 class="card-title"><strong>Duratiom Minutes: {{genre.duration_minutes}}</strong></h4>
-                        <!-- Boton check -->
-                        <div class="button-container"><button (click)="this.catchData(genre.title)" data-bs-target="#modalVerPelicula" data-bs-toggle="modal" type="button" class="btn btn-link"><img src="../../../assets/img/check3.png" alt="#"
-                            class="img-icon"></button></div>
+        <div class="genre-section">
+            <div class="d-flex justify-content-start mt-3 flex-wrap">
+                <div *ngFor="let genre of this.moviesUserGenre" class="empresas">
+                    <div class="card me-3 mt-3 ms-3">
+                        <img class="card-img-top" src="../../../assets/img/gen.jpg" alt="Imagen Empresa">
+                        <div class="card-body">
+                            <h2 class="card-title"><strong>{{genre.title}}</strong></h2>
+                            <h4 class="card-title"><strong>Rating: {{genre.rating}}</strong></h4>
+                            <h4 class="card-title"><strong>Release Year: {{genre.release_year}}</strong></h4>
+                            <h4 class="card-title"><strong>Duration Minutes: {{genre.duration_minutes}}</strong></h4>
+                            <!-- Boton check -->
+                            <div class="button-container"><button (click)="this.catchData(genre.title)" data-bs-target="#modalVerPelicula" data-bs-toggle="modal" type="button" class="btn btn-link"><img src="../../../assets/img/check3.png" alt="#" class="img-icon"></button></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <button (click)="this.onclickGenre()" type="button" class="btn btn-warning">Ver todas</button>
-            
+            <div class="button-container"><div class="button-row">
+                <button (click)="this.onclickGenre()" type="button" class="btn2 btn-warning">Ver todas</button>
+            </div></div>
         </div>
 
         <!-- Actor -->
         <h3>Actor</h3>
-        <div class="d-flex justify-content-start mt-3">
-            <div *ngFor="let actor of this.moviesUserActor" class="empresas row">
-                <div class="card me-3 mt-3 ms-3" style="width: 18rem;">
-                    <img class="card-img-top" src="../../../assets/img/act.jpg" alt="Imagen Empresa">
-                    <div class="card-body">
-                        <h2 class="card-title"><strong>{{actor.title}}</strong></h2>
-                        <h4 class="card-title"><strong>Rating: {{actor.rating}}</strong></h4>
-                        <h4 class="card-title"><strong>Release Year: {{actor.release_year}}</strong></h4>
-                        <h4 class="card-title"><strong>Duratiom Minutes: {{actor.duration_minutes}}</strong></h4>
-                        <!-- Boton check -->
-                        <div class="button-container"><button (click)="this.catchData(actor.title)" data-bs-target="#modalVerPelicula" data-bs-toggle="modal" type="button" class="btn btn-link"><img src="../../../assets/img/check3.png" alt="#"
-                            class="img-icon"></button></div>
+        <div class="actor-section">
+            <div class="d-flex justify-content-start mt-3 flex-wrap">
+                <div *ngFor="let actor of this.moviesUserActor" class="empresas">
+                    <div class="card me-3 mt-3 ms-3">
+                        <img class="card-img-top" src="../../../assets/img/act.jpg" alt="Imagen Empresa">
+                        <div class="card-body">
+                            <h2 class="card-title"><strong>{{actor.title}}</strong></h2>
+                            <h4 class="card-title"><strong>Rating: {{actor.rating}}</strong></h4>
+                            <h4 class="card-title"><strong>Release Year: {{actor.release_year}}</strong></h4>
+                            <h4 class="card-title"><strong>Duration Minutes: {{actor.duration_minutes}}</strong></h4>
+                            <!-- Boton check -->
+                            <div class="button-container"><button (click)="this.catchData(actor.title)" data-bs-target="#modalVerPelicula" data-bs-toggle="modal" type="button" class="btn btn-link"><img src="../../../assets/img/check3.png" alt="#" class="img-icon"></button></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <button (click)="this.onclickActor()" type="button" class="btn btn-warning">Ver todas</button>
+            <div class="button-container"><div class="button-row">
+                <button (click)="this.onclickActor()" type="button" class="btn2 btn-warning">Ver todas</button>
+            </div></div>
         </div>
 
 
         <!-- Director -->
         <h3>Director</h3>
-        <div class="d-flex justify-content-start mt-3">
-            <div *ngFor="let director of this.moviesUserDirector" class="empresas row">
-                <div class="card me-3 mt-3 ms-3" style="width: 18rem;">
-                    <img class="card-img-top" src="../../../assets/img/poster.jpg" alt="Imagen Empresa">
-                    <div class="card-body">
-                        <h2 class="card-title"><strong>{{director.title}}</strong></h2>
-                        <h4 class="card-title"><strong>Rating: {{director.rating}}</strong></h4>
-                        <h4 class="card-title"><strong>Release Year: {{director.release_year}}</strong></h4>
-                        <h4 class="card-title"><strong>Duratiom Minutes: {{director.duration_minutes}}</strong></h4>
-                        <!-- Boton check -->
-                        <div class="button-container"><button (click)="this.catchData(director.title)" data-bs-target="#modalVerPelicula" data-bs-toggle="modal" type="button" class="btn btn-link"><img src="../../../assets/img/check3.png" alt="#"
-                            class="img-icon"></button></div>
+        <div class="director-section">
+            <div class="d-flex justify-content-start mt-3 flex-wrap">
+                <div *ngFor="let director of this.moviesUserDirector" class="empresas">
+                    <div class="card me-3 mt-3 ms-3">
+                        <img class="card-img-top" src="../../../assets/img/poster.jpg" alt="Imagen Empresa">
+                        <div class="card-body">
+                            <h2 class="card-title"><strong>{{director.title}}</strong></h2>
+                            <h4 class="card-title"><strong>Rating: {{director.rating}}</strong></h4>
+                            <h4 class="card-title"><strong>Release Year: {{director.release_year}}</strong></h4>
+                            <h4 class="card-title"><strong>Duration Minutes: {{director.duration_minutes}}</strong></h4>
+                            <!-- Boton check -->
+                            <div class="button-container"><button (click)="this.catchData(director.title)" data-bs-target="#modalVerPelicula" data-bs-toggle="modal" type="button" class="btn btn-link"><img src="../../../assets/img/check3.png" alt="#" class="img-icon"></button></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <button (click)="this.onclickDirector()" type="button" class="btn btn-warning">Ver todas</button>
+            <div class="button-container"><div class="button-row">
+                <button (click)="this.onclickDirector()" type="button" class="btn2 btn-warning">Ver todas</button>
+            </div></div>
+            
         </div>
 
     </div>

@@ -26,6 +26,10 @@ export class ActorComponent {
     this.funcRecommendationActor()
   }
 
+  backToMain(){
+    this.router.navigateByUrl("/recomendaciones")
+  }
+
   funcRecommendationActor() {
     this.recommendationService.funcRecommendationActor(this.loginRest.getUser()).subscribe({
       next: (res: any) => {        
