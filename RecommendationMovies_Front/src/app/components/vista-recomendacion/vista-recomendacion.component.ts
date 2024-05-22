@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { UserModel } from 'src/app/Models/user';
+import { Router } from '@angular/router';
 import { LoginRestService } from 'src/app/services/login-rest.service';
 import { RecommendationServiceService } from 'src/app/services/recommendation-service.service';
 import Swal from 'sweetalert2';
@@ -12,13 +11,25 @@ import Swal from 'sweetalert2';
 })
 export class VistaRecomendacionComponent {
   user: any;
+  // Todas la peliculas
   moviesGenre: any[] = [];
+  // Peliculas que se mostrarán al usuario
+  moviesUserGenre: any[] = [];
+
+  // Todas las peliculas
   moviesActor: any[] = [];
+  // Peliculas que se mostrarán al usuario
+  moviesUserActor: any[] = [];
+
+  // Todas las películas
   moviesDirector: any[] = [];
+  // Peliculas que se mostrarán al usuario
+  moviesUserDirector: any[] = [];
 
   constructor(
     private recommendationService: RecommendationServiceService,
-    private loginRest: LoginRestService
+    private loginRest: LoginRestService,
+    private router: Router
   ) {
 
   }
@@ -29,12 +40,29 @@ export class VistaRecomendacionComponent {
     this.funcRecommendationDirector()
   }
 
+  onclickGenre(){
+    this.router.navigateByUrl("/genre")
+  }
+
+  onclickActor(){
+    this.router.navigateByUrl("/actor")
+  }
+
+  onclickDirector(){
+    this.router.navigateByUrl("/director")
+  }
+
   funcRecommendationGenre() {
     this.recommendationService.funcRecommendationGenre(this.loginRest.getUser()).subscribe({
       next: (res: any) => {        
-        this.moviesGenre = res.peliculasUnicas
-        console.log(this.moviesGenre);
-        
+        this.moviesGenre = res.peliculasUnicas    
+        if (this.moviesGenre.length >= 8){
+          for(let i = 0; i < 8; i++){
+            this.moviesUserGenre.push(this.moviesGenre[i])
+          }
+        } else{
+          this.moviesUserGenre = res.peliculasUnicas   
+        }  
       },
       error: (err) => {
         Swal.fire({
@@ -51,7 +79,15 @@ export class VistaRecomendacionComponent {
     this.recommendationService.funcRecommendationActor(this.loginRest.getUser()).subscribe({
       next: (res: any) => {        
         this.moviesActor = res.peliculasUnicas
-        console.log(this.moviesActor);
+        
+        if (this.moviesActor.length >= 8){
+          for(let i = 0; i < 8; i++){
+            this.moviesUserActor.push(this.moviesActor[i])
+          }
+        }else{
+          this.moviesUserActor = res.peliculasUnicas
+        }
+        
       },
       error: (err) => {
         Swal.fire({
@@ -68,7 +104,14 @@ export class VistaRecomendacionComponent {
     this.recommendationService.funcRecommendationDirector(this.loginRest.getUser()).subscribe({
       next: (res: any) => {        
         this.moviesDirector = res.peliculasUnicas
-        console.log(this.moviesDirector);
+        if (this.moviesDirector.length >= 8){
+          for(let i = 0; i < 8; i++){
+            this.moviesUserDirector.push(this.moviesDirector[i])
+          }
+          
+        }else{
+          this.moviesUserDirector = res.peliculasUnicas
+        }
         
       },
       error: (err) => {
@@ -99,6 +142,7 @@ export class VistaRecomendacionComponent {
           icon: 'success',
           timer: 2000
         });
+        this.ngOnInit();
       },
       error: (err) => {
         Swal.fire({

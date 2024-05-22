@@ -1,0 +1,46 @@
+<div class="body fondo">
+    <app-nav-bar></app-nav-bar>
+
+    <div class="d-flex flex-column mx-5 my-5">
+
+        <!-- Actor -->
+        <h3>Actor</h3>
+        <div class="d-flex justify-content-start mt-3">
+            <div *ngFor="let actor of this.moviesActor" class="empresas row">
+                <div class="card me-3 mt-3 ms-3" style="width: 18rem;">
+                    <img class="card-img-top" src="../../../assets/img/act.jpg" alt="Imagen Empresa">
+                    <div class="card-body">
+                        <h2 class="card-title"><strong>{{actor.title}}</strong></h2>
+                        <h4 class="card-title"><strong>Rating: {{actor.rating}}</strong></h4>
+                        <h4 class="card-title"><strong>Release Year: {{actor.release_year}}</strong></h4>
+                        <h4 class="card-title"><strong>Duratiom Minutes: {{actor.duration_minutes}}</strong></h4>
+                        <!-- Boton check -->
+                        <div class="button-container"><button (click)="this.catchData(actor.title)" data-bs-target="#modalVerPelicula" data-bs-toggle="modal" type="button" class="btn btn-link"><img src="../../../assets/img/check3.png" alt="#"
+                            class="img-icon"></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modalVerPelicula" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="container">
+                <div class="modal-content">
+                    <div class="contact-box">
+                        <div class="left"></div>
+                        <div class="right">
+                            <div class="position-relative">
+                                <button type="button" class="btn-close position-absolute top-0 start-100 translate-middle" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <h4>¿Está seguro que desea ver esta Película?</h4>
+                            <button (click)="this.funcWatched()"  class="buttonModalNewUser mb-3" data-bs-dismiss="modal">Si</button>
+                            <button style="background: #F8333C;" class="buttonModalNewUser" data-bs-dismiss="modal">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>

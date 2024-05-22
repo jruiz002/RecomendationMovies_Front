@@ -5,9 +5,9 @@
 
         <!-- Género -->
         <h3>Género</h3>
-        <div class="d-flex justify-content-around mt-3">
+        <div class="d-flex justify-content-start mt-3">
 
-            <div *ngFor="let genre of this.moviesGenre" class="empresas row">
+            <div *ngFor="let genre of this.moviesUserGenre" class="empresas row">
                 <div class="card me-3 mt-3 ms-3" style="width: 18rem;">
                     <img class="card-img-top" src="../../../assets/img/gen.jpg" alt="Imagen Empresa">
                     <div class="card-body">
@@ -21,13 +21,14 @@
                     </div>
                 </div>
             </div>
+            <button (click)="this.onclickGenre()" type="button" class="btn btn-warning">Ver todas</button>
             
         </div>
 
         <!-- Actor -->
         <h3>Actor</h3>
-        <div class="d-flex justify-content-around mt-3">
-            <div *ngFor="let actor of this.moviesActor" class="empresas row">
+        <div class="d-flex justify-content-start mt-3">
+            <div *ngFor="let actor of this.moviesUserActor" class="empresas row">
                 <div class="card me-3 mt-3 ms-3" style="width: 18rem;">
                     <img class="card-img-top" src="../../../assets/img/act.jpg" alt="Imagen Empresa">
                     <div class="card-body">
@@ -41,12 +42,14 @@
                     </div>
                 </div>
             </div>
+            <button (click)="this.onclickActor()" type="button" class="btn btn-warning">Ver todas</button>
         </div>
+
 
         <!-- Director -->
         <h3>Director</h3>
-        <div class="d-flex justify-content-around mt-3">
-            <div *ngFor="let director of this.moviesDirector" class="empresas row">
+        <div class="d-flex justify-content-start mt-3">
+            <div *ngFor="let director of this.moviesUserDirector" class="empresas row">
                 <div class="card me-3 mt-3 ms-3" style="width: 18rem;">
                     <img class="card-img-top" src="../../../assets/img/poster.jpg" alt="Imagen Empresa">
                     <div class="card-body">
@@ -60,6 +63,7 @@
                     </div>
                 </div>
             </div>
+            <button (click)="this.onclickDirector()" type="button" class="btn btn-warning">Ver todas</button>
         </div>
 
     </div>

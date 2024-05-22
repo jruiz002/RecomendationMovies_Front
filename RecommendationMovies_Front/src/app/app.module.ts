@@ -10,6 +10,9 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { NavBarLoginComponent } from './components/nav-bar-login/nav-bar-login.component';
 import { VistaAdminComponent } from './components/vista-admin/vista-admin.component';
 import { VistaRecomendacionComponent } from './components/vista-recomendacion/vista-recomendacion.component';
+import { GenreComponent } from './components/genre/genre.component';
+import { ActorComponent } from './components/actor/actor.component';
+import { DirectorComponent } from './components/director/director.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { VistaRecomendacionComponent } from './components/vista-recomendacion/vi
     NavBarComponent,
     NavBarLoginComponent,
     VistaAdminComponent,
-    VistaRecomendacionComponent
+    VistaRecomendacionComponent,
+    GenreComponent,
+    ActorComponent,
+    DirectorComponent
   ],
   imports: [
     BrowserModule,
